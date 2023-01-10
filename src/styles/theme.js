@@ -10,7 +10,7 @@ export const theme = {
             default: "'Open Sans', sans-serif",
             secondary: "'Montserrat', sans-serif",
         },
-        size:{
+        sizes:{
             xsmall: '8rem',
             samall: '1.6rem',
             medium: '2.4rem',
@@ -20,6 +20,9 @@ export const theme = {
             huge: '5.6rem',
             xhuge: '6.4rem'
         }
+    },
+    media:{
+        lteMedium: '(max-width: 768px)',
     },
     spacing:{}
 }
