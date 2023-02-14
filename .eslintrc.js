@@ -1,36 +1,36 @@
-módulo . exporta  =  {
-    ambiente : {
-      navegador : verdadeiro ,
-      es6 : verdadeiro ,
-    } ,
-    estende : [
-      'plugin:reagir/recomendado' ,
-      'airbnb' ,
-      'mais bonita' ,
-      'mais bonita/reagir' ,
-    ] ,
-    globais : {
-      Atomics : 'somente leitura' ,
-      SharedArrayBuffer : 'somente leitura' ,
-    } ,
-    analisador : 'babel-eslint' ,
-    parserOptions : {
-      Recursosdoecma : {
-        jsx : verdadeiro ,
+module.exports = {
+    environment:{
+      browser: true,
+      es6: true,
+    },
+    extends:[
+      'plugin:react/recommended',
+      'airbnb',
+      'more-beautiful',
+      'prettier/react',
+    ],
+    globals: {
+      Atomics: 'read-only',
+      SharedArrayBuffer: 'read-only',
+    },
+    parser: 'babel-eslint',
+    parserOptions:{
+      ECMAResources :{
+        jsx:true,
       },
-      versaoecma : 2018 ,
-      sourceType : 'módulo' ,
+      version: 2018,
+      sourceType: 'module',
     },
     plugins: [
-      'reagir' ,
-      'mais bonita' ,
-      'ganchos de reação'
-    ] ,
-    regras:{
-      'mais bonito/mais bonito' : 'erro' ,
-      'reagir/jsx-uma-expressão-por-linha' : 0 ,
-      'react/jsx-filename-extension' : 0 ,
-      "ganchos de reação/regras de ganchos" : "erro" ,
-      "react-hooks/exhaustive-deps" : "avisar"
-    },
+      'to-react',
+      'more-beautiful',
+      'reaction-hooks'
+    ],
+    rules: {
+      'prettier/prettier': 'error',
+      'react/jsx-one-expression-per-line': 0 ,
+      'react/jsx-filename-extension': 0,
+      "reaction-hooks/hook-rules": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    } ,
   } ;
