@@ -1,15 +1,15 @@
-import { GridSection } from './GridSection';
+import { GridText } from './GridText';
 import mock from './mock';
 
 export default {
-    title: 'GridSection',
-    component: GridSection,
+    title: 'GridText',
+    component: GridText,
     args: mock,
 };
 export const Template = (args) => {
     return (
         <div>
-            <GridSection {...args} />
+            <GridText {...args} />
         </div>
     );
 };
