@@ -4,16 +4,16 @@ import P from 'prop-types';
 import { TextComponent } from '../TextComponent/TextComponent';
 import { SectionContainer } from '../SectionContainer/SectionContainer';
 
-export const Footer = ({ children }) => {
+export const Footer = ({ html }) => {
     return (
         <Styled.Container>
             <SectionContainer>
-                <TextComponent>{children}</TextComponent>
+                <TextComponent>{html}</TextComponent>
             </SectionContainer>
         </Styled.Container>
     );
 };
 
 Footer.propTypes = {
-    children: P.node.isRequired,
+    html: P.string.isRequired,
 };

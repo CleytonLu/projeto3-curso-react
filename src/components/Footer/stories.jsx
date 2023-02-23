@@ -1,18 +1,15 @@
-import {Footer} from './Footer'
-export default{
-title: 'Footer',
-component: Footer,
-args:{
-    children: `<p><a href= "https://beacons.page/otaviomiranda"> Feito com <3 por Cleyton Lucas</a><p>`,
-},
-argTypes:{
-    children: {type: 'string'},
-},
-}
+import { Footer } from './Footer';
+export default {
+    title: 'Footer',
+    component: Footer,
+    args: {
+        html: `<p><a href= "https://beacons.page/otaviomiranda"> Feito com <3 por Cleyton Lucas</a><p>`,
+    },
+};
 export const Template = (args) => {
-return(
-    <div>
-        <Footer {...args} />
-    </div>
-);
+    return (
+        <div>
+            <Footer {...args} />
+        </div>
+    );
 };
