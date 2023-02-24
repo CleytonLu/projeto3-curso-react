@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {SectionContainer} from '../SectionContainer/styles'
+import {Container as SectionContainer} from '../SectionContainer/styles'
 import {Title as Heading} from '../Heading/styles'
 
 const menuVisible = (theme) => css`
