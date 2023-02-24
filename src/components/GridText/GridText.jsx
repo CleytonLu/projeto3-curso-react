@@ -13,8 +13,8 @@ export const GridText = ({ title, description, grid, background }) => {
                 </Heading>
                 <TextComponent>{description}</TextComponent>
                 <Styled.Grid>
-                    {grid.map((item, index) => (
-                        <Styled.GridElement key={index}>
+                    {grid.map((item) => (
+                        <Styled.GridElement key={item.title}>
                             <Heading
                                 size="medium"
                                 colorDark={!background}

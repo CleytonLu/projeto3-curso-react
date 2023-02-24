@@ -14,8 +14,10 @@ export const Container = styled.div`
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+        width: 100%;
         border-bottom: ${theme.colors.mediumGray};
+        background-color: ${theme.colors.white};
+        overflow-y: auto;
         transition: all 300ms ease-in-out;
 
 
@@ -32,6 +34,7 @@ export const Container = styled.div`
             height: 100vh;
             visibility: hidden;
             opacity: 0;
+            overflow-y: auto;
             ${visible && menuVisible(theme)}
 
         > ${SectionContainer}{
@@ -39,12 +42,13 @@ export const Container = styled.div`
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             height: 100vh;
+            align-items: center;
         }
         & ${Heading}{
             padding-bottom: ${theme.spacings.large};
             display: flex;
             justify-content: center;
-    }
+        }
     }
     `}
 `;
@@ -54,6 +58,7 @@ export const MenuContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media ${theme.media.lteMedium}{
         display: block;
         text-align: center;
@@ -71,9 +76,10 @@ export const Button = styled.button`
         right: 2rem;
         width: 4rem;
         height: 4rem;
-        background: ${theme.colors.primaryColors};
+        background: ${theme.colors.primaryColor};
         color: ${theme.colors.white};
         border: none;
+        display: none;
         pointer-events: ${visible ? 'none' : 'all'};
 
         @media ${theme.media.lteMedium}{

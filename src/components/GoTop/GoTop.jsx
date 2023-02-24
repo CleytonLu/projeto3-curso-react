@@ -6,7 +6,7 @@ import { KeyboardArrowUp } from '@styled-icons/material-outlined/KeyboardArrowUp
 export const GoTop = ({ children }) => {
     return (
         <Styled.Container href="#" aria-label='Vai Para o Topo' title='Vai Para o Topo'>
-            <KeyboardArrowUp />
+            <KeyboardArrowUp /> 
         </Styled.Container>
     );
 };
