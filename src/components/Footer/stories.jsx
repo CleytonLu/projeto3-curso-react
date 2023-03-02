@@ -3,7 +3,7 @@ export default {
     title: 'Footer',
     component: Footer,
     args: {
-        html: `<p><a href= "https://beacons.page/otaviomiranda"> Feito com <3 por Cleyton Lucas</a><p>`,
+        footerHtml: `<p><a href= "https://beacons.page/otaviomiranda"> Feito com <3 por Cleyton Lucas</a><p>`,
     },
 };
 export const Template = (args) => {
