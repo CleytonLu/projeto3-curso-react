@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
     ${({ theme }) => css`
@@ -7,9 +7,8 @@ export const Container = styled.a`
         text-decoration: none;
         color: inherit;
 
-
-        > img{
-            max-height: 3rem;
+        > img {
+            height: 3rem;
         }
     `}
 `;

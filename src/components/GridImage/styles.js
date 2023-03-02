@@ -4,7 +4,7 @@ import { Container as TextContainer } from '../TextComponent/styles';
 
 export const Container = styled.div`
     ${({ theme, background }) => css`
-        ${TextContainer}{
+        ${TextContainer} {
             margin-bottom: ${theme.spacings.huge};
         }
     `}
@@ -16,17 +16,21 @@ export const Grid = styled.div`
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: ${theme.spacings.large};
+
+        @media ${theme.media.lteMedium} {
+            grid-template-columns: 1fr;
+        }
     `}
 `;
 
 export const GridElement = styled.div`
     ${({ theme }) => css`
-        ${HeadingContainer}{
+        ${HeadingContainer} {
             position: relative;
             left: 5rem;
         }
 
-        ${HeadingContainer}::before{
+        ${HeadingContainer}::before {
             counter-increment: grid-counter;
             content: counter(grid-counter);
             position: absolute;
@@ -43,7 +47,7 @@ export const Image = styled.img`
         width: 100%;
         transition: all 300ms ease-in-out;
 
-        &:hover{
+        &:hover {
             transform: scale(1) rotate(10deg);
         }
     `}
