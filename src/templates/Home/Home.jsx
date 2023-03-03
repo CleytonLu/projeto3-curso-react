@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { mapData } from '../../api/map-data';
-import mockBase from '../Base/mock';
 
 import { GridTwoColumns } from '../../components/GridTwoColumns/GridTwoColumns';
 import { GridContent } from '../../components/GridContent/GridContent';
@@ -10,6 +9,8 @@ import { GridImage } from '../../components/GridImage/GridImage';
 import { Base } from '../Base/Base';
 import { PageNotFound } from '../PageNotFound';
 import { Loading } from '../Loading';
+
+import config from '../../config/index'
 
 function Home() {
     const [data, setData] = useState([]);
@@ -39,6 +40,20 @@ function Home() {
             isMounted.current = false;
         };
     }, []);
+
+    useEffect(()=> {
+        if (data === undefined) {
+            document.title = `Página não encontrada | ${config.siteName}`;
+        }
+
+        if (data && !data.slug) {
+            document.title = `Carregando... | ${config.siteName}`;
+        }
+
+        if (data && data.title) {
+            document.title = `${data.title} | ${config.siteName}`;
+        }
+    }, [])
 
     if (data === undefined) {
         return <PageNotFound />;
